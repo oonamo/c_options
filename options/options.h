@@ -1,6 +1,10 @@
 #ifndef _OPTIONS_H
 #define _OPTIONS_H
 
+#ifndef NULL
+#define NULL ((void*)0)
+#endif
+
 typedef struct Option
 {
     void *data;

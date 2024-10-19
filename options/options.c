@@ -12,7 +12,7 @@ void *unwrap_or(Option_t option, void *def)
 
 void *unwrap_or_else(Option_t option, void *(*defaultFn)())
 {
-    if (option.ok)
+    if (option.ok == 1)
     {
         return option.data;
     }
