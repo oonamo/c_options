@@ -10,7 +10,7 @@ typedef struct Option
 typedef void *(*convert)(void *);
 
 #define Some(value)                                                            \
-    (Option_t) { .data = value, .ok = 1 }
+    (Option_t) { .data = (void*)value, .ok = 1 }
 
 #define None                                                                   \
     (Option_t) { .data = NULL, .ok = 0 }
