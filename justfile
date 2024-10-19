@@ -1,12 +1,8 @@
-set shell := ["cmd.exe", "/c"]
+set shell := ["pwsh.exe", "-Command"]
 
-build_object:
-  gcc -c options/options.c -o options/options.o
-static_build: build_object
-  ar rcs options/options.lib options/options.o
+build:
+  cd ./build && cmake ".." && cmake --build .
 
-build_test: static_build
+test: build
   gcc tests/test.c -I./options -L./options -loptions -o options_tests
-
-test: build_test
-  options_tests
+  ./options_tests

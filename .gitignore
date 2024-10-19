@@ -1,5 +1,9 @@
 /build/
 
+compile_commands.json
+
+*.cache
+
 CMakeCache.txt
 CMakeFiles/
 Makefile
